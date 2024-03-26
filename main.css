@@ -1,19 +1,19 @@
 body {
-    background-color: Thistle; 
-    color:RoyalBlue; 
+    background-color: Linen; 
+    color: rgb(70, 130, 180); 
     font-family: Arial; 
     margin: 0px;
 }
 
 main {
-    color: MediumBlue; 
+    color: rgb(70, 130, 180); 
     padding: 15px;
     font-size: 15pt;
 }
 
 footer {
-    background-color: Orchid; 
-    color: MediumBlue; 
+    background-color: rgb(255, 229, 180); 
+    color: rgb(70, 130, 180); 
     padding: 15px; 
     font-size: 16pt; 
     font-style: italic; 
@@ -21,8 +21,8 @@ footer {
 }
 
 header {
-    background-color: Orchid; 
-    color: MediumBlue; 
+    background-color: rgb(255, 229, 180); 
+    color: rgb(70, 130, 180); 
     padding: 20px; 
     font-size: 25pt;
 }
