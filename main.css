@@ -29,3 +29,19 @@ header {
 a {
     text-decoration: none
 }
+a:hover {
+    color: Crimson;
+    text-decoration: underline;
+    text-shadow: 4px 3px 3px rgb(0, 128, 128, 0.5);
+    background: linear-gradient(to right top, rgb(255, 222, 173), rgb(226, 223, 210))
+}
+a:active {
+    color: black;
+    opacity: 0.3;
+}
+a:link {
+    color:  rgb(0, 128, 128,);
+}
+a:visited {
+    color: MediumOrchid;
+}
