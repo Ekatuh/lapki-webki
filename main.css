@@ -48,3 +48,16 @@ a:link {
 a:visited {
     color: MediumOrchid;
 }
+div.menu {
+    border: 1px solid;
+    border-radius: 5px;
+    width: 300px;
+    margin: 0 auto;
+}
+div.menu:hover {
+    background-color: Thistle;
+    box-shadow: 0 0 15px black;
+}
+h1 {
+    text-align: center;
+}
