@@ -27,13 +27,16 @@ header {
     font-size: 25pt;
 }
 a {
-    text-decoration: none
+    color: blueviolet;
+    text-decoration: none;
+    transition: 1s 2s;
 }
 a:hover {
     color: Crimson;
     text-decoration: underline;
     text-shadow: 4px 3px 3px rgb(0, 128, 128, 0.5);
-    background: linear-gradient(to right top, rgb(255, 222, 173), rgb(226, 223, 210))
+    background: linear-gradient(to right top, rgb(255, 222, 173), rgb(226, 223, 210));
+    transition: 0.3s;
 }
 a:active {
     color: black;
