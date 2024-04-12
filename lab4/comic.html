@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Кузьменко Екатерина Алексеевна. Мемные картинки</title>
+        <link rel="stylesheet" href="../main.css">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../favicon-32x32.png">
+        <link rel="icon" href="../favicon-16x16.png">
+        <style>
+            .container div {
+                display: none;
+            }
+            .kart:hover+.container div {
+                display: block;
+            }
+            .meme {
+                width: 50px;
+                height: 50px;
+                left: 370px;
+                line-height: 70px;
+                background-color: rgb(181, 255, 239);
+                border: 3px dotted rgb(176, 127, 255);
+                margin: 15px;
+                bottom: 500px;
+                border-radius: 50%;
+                position: relative;
+                z-index: 1;
+            }
+            .meme1 {
+                width: 80px;
+                height: 80px;
+                left: 300px;
+                line-height: 70px;
+                background-color: rgb(181, 255, 239);
+                border: 3px dotted rgb(176, 127, 255);
+                margin: 15px;
+                bottom: 650px;
+                border-radius: 50%;
+                position: relative;
+                z-index: 1;
+            }
+            .meme2 {
+                width: 100px;
+                height: 100px;
+                left: 220px;
+                line-height: 70px;
+                background-color: rgb(181, 255, 239);
+                border: 3px dotted rgb(176, 127, 255);
+                margin: 15px;
+                border-radius: 50%;
+                bottom: 840px;
+                position: relative;
+                z-index: 1;
+            }
+            .meme3 {
+                width: 180px;
+                height: 100px;
+                left: 110px;
+                line-height: 70px;
+                text-align: center;
+                background-color: rgb(181, 255, 239);
+                border: 3px dotted rgb(176, 127, 255);
+                margin: 15px;
+                border-radius: 50%;
+                bottom: 1050px;
+                position: relative;
+                z-index: 1;
+            }
+            .kart {
+                position: relative;
+                height: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            НГТУ, ФБ, Лабораторная работа 4
+        </header>
+        <main>
+            <img class="kart" src="../Рик.jpg" style="width:100%;">
+            <div class="container">
+                <div class="meme"></div>
+                <div class="meme1"></div>
+                <div class="meme2"></div>
+                <div class="meme3">Я хотеть спать!</div>
+            </div>
+        </main>
+
+        <footer>
+            &copy; Екатерина Кузьменко, ФБИ-23, 2 курс, 2024
+        </footer>
+    </body>
+</html>
