@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Кузьменко Екатерина Алексеевна. Лабораторная 5</title>
+        <link rel="stylesheet" href="../main.css">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../favicon-32x32.png">
+        <link rel="icon" href="../favicon-16x16.png">
+        <script>
+            function changeOutput() {
+                let inputA = document.getElementById('numberA');
+                let inputB = document.getElementById('numberB');
+                let inputC = document.getElementById('numberC');
+                let inputD = document.getElementById('numberD');
+                let inputF = document.getElementById('numberF');
+
+                let a = parseInt(inputA.value);
+                let b = parseInt(inputB.value);
+                let c = parseInt(inputC.value);
+                let d = parseInt(inputD.value);
+                let f = parseInt(inputF.value);
+                let result = a * 100 + b * 80 + c * 150 + d* 300 + f*50;
+                let output = document.getElementById('output');
+                output.innerHTML = 'Общая цена: ' + result + 'руб';
+            } 
+            function changeClear() {
+                document.getElementById('numberA').value = '';
+                document.getElementById('numberB').value = '';
+                document.getElementById('numberC').value = '';
+                document.getElementById('numberD').value = '';
+                document.getElementById('numberF').value = '';
+                document.getElementById('output').remove();
+            }
+        </script>
+        <style>
+            .message {
+                display: inline-block;
+                background-color: #f2c9ff;
+                padding: 15px;
+                margin: 5px;
+                width: 300px;
+                height: 400px;
+                border: 1px solid #8697fa;
+                border-radius: 10px;
+            }
+            #output {
+                border: 1px none;
+                width: 200px;
+                height: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            НГТУ, ФБ, Лабораторная работа 5
+        </header>
+
+        <main>
+            <div class="message">
+                <h1 style="font-size: 30px; text-align: left; margin: 5px;">Корзина товаров</h1>
+                <label>Яблоки (100р/шт): <input type="number"  value="" id="numberA" min="0" placeholder="Колличество яблок:"></label><br>
+                <label>Груши (80р/шт): <input type="number" value="" id="numberB" min="0" placeholder="Колличество груш:"></label><br>
+                <label>Апельсины (150р/шт): <input type="number" value="" id="numberC" min="0" placeholder="Колличество апельсинов:"></label><br>
+                <label>Дыни (300р/шт): <input type="number" value="" id="numberD" min="0" placeholder="Колличество дынь:"></label><br>
+                <label>Мандарины (50р/шт): <input type="number" value="" id="numberF" min="0" placeholder="Колличество мандаринов:"></label><br>
+                
+                <div>
+                    <input type="button" value="Рассчитать" onclick="changeOutput()">
+                    <input type="button" value="Очистить" onclick="changeClear()">
+                </div>
+
+                <div id="output"></div>
+            </div>
+            
+        </main>
+
+        <footer>
+            &copy; Екатерина Кузьменко, ФБИ-23, 2 курс, 2024
+        </footer>
+    </body>
+</html>
