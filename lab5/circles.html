@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Кузьменко Екатерина Алексеевна. Лабораторная 5</title>
+        <link rel="stylesheet" href="../main.css">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../favicon-32x32.png">
+        <link rel="icon" href="../favicon-16x16.png">
+        <script>
+            function hideCircle(circle) {
+                circle.style.opacity = '0';
+                circle.style.width = '0';
+                circle.style.heigth = '0';
+            }
+
+            function resetCircles() {
+                var circles = document.querySelectorAll('.circle');
+                circles.forEach(function(circle) {
+                    circle.style.opacity = '1';
+                    circle.style.width = '100px';
+                    circle.style.heigth = '100px';
+                })
+            }
+        </script>
+        <style>
+            .circle {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                position: absolute;
+                text-align: center;
+                line-height: 100px;
+                cursor: pointer;
+                font-size: 20px;
+                position: absolute;
+                transition: 0.5s;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            НГТУ, ФБ, Лабораторная работа 5
+        </header>
+
+        <main>
+            <div class="circle" style="background-color: red; top: 500px; left: 200px;" onclick="hideCircle(this)">1</div>
+            <div class="circle" style="background-color: blue; top: 300px; left: 800px;" onclick="hideCircle(this)">2</div>
+            <div class="circle" style="background-color: green; top: 400px; left: 100px;" onclick="hideCircle(this)">3</div>
+            <div class="circle" style="background-color: yellow; top: 450px; left: 1000px;" onclick="hideCircle(this)">4</div>
+            <div class="circle" style="background-color: orange; top: 150px; left: 850px;" onclick="hideCircle(this)">5</div>
+            <div class="circle" style="background-color: purple; top: 50px; left: 650px;" onclick="hideCircle(this)">6</div>
+            <div class="circle" style="background-color: pink; top: 200px; left: 1200px;" onclick="hideCircle(this)">7</div>
+            <div class="circle" style="background-color: cyan; top: 350px; left: 500px;" onclick="hideCircle(this)">8</div>
+            <div class="circle" style="background-color: brown; top: 180px; left: 220px;" onclick="hideCircle(this)">9</div>
+            <div class="circle" style="background-color: gray; top: 200px; left: 500px;" onclick="hideCircle(this)">10</div>
+            <button onclick="resetCircles()">Сбросить</button>
+        </main>
+
+        <footer>
+            &copy; Екатерина Кузьменко, ФБИ-23, 2 курс, 2024
+        </footer>
+    </body>
+</html>
