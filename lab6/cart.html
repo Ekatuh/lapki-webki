@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Кузьменко Екатерина Алексеевна. Корзина товаров</title>
+        <link rel="stylesheet" href="../main.css">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../favicon-32x32.png">
+        <link rel="icon" href="../favicon-16x16.png">
+        <script>
+            function pop() {
+                let balance = parseFloat(document.getElementById('balance').value);
+                let prod1 = parseFloat(document.getElementById('prod1').value) || 0;
+                let prod2 = parseFloat(document.getElementById('prod2').value) || 0;
+                let prod3 = parseFloat(document.getElementById('prod3').value) || 0;
+                let prod4 = parseFloat(document.getElementById('prod4').value) || 0;
+                let prod5 = parseFloat(document.getElementById('prod5').value) || 0;
+                let prod6 = parseFloat(document.getElementById('prod6').value) || 0;
+                let prod7 = parseFloat(document.getElementById('prod7').value) || 0;
+                
+                let total = 90 * prod1 + 50 * prod2 + 150 * prod3 + prod4 * 220 + prod5 * 90 + prod6 * 120 + prod7*80;
+                const resultDiv = document.getElementById('result');
+                if (prod1 < 0 || prod2 < 0 || prod3 < 0 || prod4 < 0 || prod5 < 0 || prod6 < 0 || prod7 < 0) {
+                    resultDiv.textContent = 'Количество товара не может быть отрицательным!';
+                } 
+                else if (total > balance) {
+                    resultDiv.textContent = 'Общая сумма ' + total + 'р превышает ваш баланс ' + balance + 'р .';
+                } 
+                else if (prod1 == 0 && prod2 == 0 && prod3 == 0 && prod4 == 0 && prod5 == 0 && prod6 == 0 && prod7 == 0) {
+                    resultDiv.textContent = 'Выберите хотя бы один товар!';
+                } 
+                else {
+                    resultDiv.textContent = 'Закак оформлен. Итого:' + total + 'р'
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            НГТУ, ФБ, Лабораторная работа 6
+        </header>
+
+        <main>
+            <label for="balance">Мой баланс:</label> 
+            <input type="number" id="balance" value="200"> 
+
+            <table border="2" style="border-color: blueviolet;">
+                <tr>
+                    <td></td>
+                    <td style="text-align: center;">Название</td>
+                    <td style="text-align: center;">Цена</td>
+                    <td style="text-align: center;">Количество</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Молоко</td>
+                    <td>90 р</td>
+                    <td><input type="number" value="0" id="prod1"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Хлеб белый</td>
+                    <td>50 р</td>
+                    <td><input type="number" value="0" id="prod2"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Масло, 200 гр</td>
+                    <td>150 р</td>
+                    <td><input type="number" value="0" id="prod3"></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Помидоры</td>
+                    <td>220 р</td>
+                    <td><input type="number" value="0" id="prod4"></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Лапша</td>
+                    <td>90 р</td>
+                    <td><input type="number" value="0" id="prod5"></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Огурцы</td>
+                    <td>120 р</td>
+                    <td><input type="number" value="0" id="prod6"></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Шоколад</td>
+                    <td>80 р</td>
+                    <td><input type="number" value="0" id="prod7"></td>
+                </tr>
+            </table>
+
+            <p><button onclick="pop()">OK</button></p>
+            <div id="result"></div>
+        </main>
+
+        <footer>
+            &copy; Екатерина Кузьменко, ФБИ-23, 2 курс, 2024
+        </footer>
+    </body>
+</html>
