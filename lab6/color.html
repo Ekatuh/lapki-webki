@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Кузьменко Екатерина Алексеевна. Цвета</title>
+        <link rel="stylesheet" href="../main.css">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../favicon-32x32.png">
+        <link rel="icon" href="../favicon-16x16.png">
+        <style>
+            .color {
+                background-color: pink;
+                border: 1px solid #be4eff;
+                border-radius: 10px;
+                width: 350px;
+                padding: 30px;
+                margin: 10px;
+                text-align: center;
+                cursor: pointer;
+                transition: background-color 0.5s, color 0.5s;
+            }
+        </style>
+        <script>
+            function changeColor(div) {
+                if(div.style.backgroundColor == 'pink') {
+                    div.style.backgroundColor = 'red';
+                    div.style.color = 'brown';
+                    document.getElementById('color-name').innerHTML = 'красный';
+                }
+                else if (div.style.backgroundColor == 'red') {
+                    div.style.backgroundColor = 'violet';
+                    div.style.color = 'darkblue';
+                    document.getElementById('color-name').innerHTML = 'фиолетовый';
+                }
+                else if (div.style.backgroundColor == 'violet') {
+                    div.style.backgroundColor = 'blue';
+                    div.style.color = 'white';
+                    document.getElementById('color-name').innerHTML = 'синий';
+                }
+                else if (div.style.backgroundColor == 'blue') {
+                    div.style.backgroundColor = 'green';
+                    div.style.color = 'teal';
+                    document.getElementById('color-name').innerHTML = 'зеленый';
+                }
+                else if (div.style.backgroundColor == 'green') {
+                    div.style.backgroundColor = 'yellow';
+                    div.style.color = 'black';
+                    document.getElementById('color-name').innerHTML = 'желтый';
+                }
+                else if (div.style.backgroundColor == 'yellow') {
+                    div.style.backgroundColor = 'aqua';
+                    div.style.color = 'blue';
+                    document.getElementById('color-name').innerHTML = 'Морской волны';
+                }
+                else {
+                    div.style.backgroundColor = 'pink';
+                    div.style.color = 'rgb(70, 130, 180)';
+                    document.getElementById('color-name').innerHTML = 'розовый';
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <header>
+            НГТУ, ФБ, Лабораторная работа 6
+        </header>
+
+        <main>
+            <div class="color" ondblclick="changeColor(this)">
+                Цвет: <span id="color-name">розовый</span><br>
+                Сделайте двойной щелчок чтобы сменить
+            </div>
+        </main>
+
+        <footer>
+            &copy; Екатерина Кузьменко, ФБИ-23, 2 курс, 2024
+        </footer>
+    </body>
+</html>
+            
