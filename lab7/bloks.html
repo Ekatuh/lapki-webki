@@ -71,6 +71,23 @@
                     main.appendChild(newCircle);
                 }
             }
+            function addOpacityBlocks() {
+                let main = document.querySelector('main');
+                let opacity = 0;
+                for (let i = 0; i < 10; i++) {
+                    let newBlock = document.createElement('div');
+                    newBlock.classList.add('opacity-block');
+                    newBlock.style.backgroundColor = 'RebeccaPurple';
+                    newBlock.style.width = '50px';
+                    newBlock.style.height = '50px';
+                    newBlock.style.border = '1px solid black';
+                    newBlock.style.display = 'inline-block';
+                    newBlock.style.marginRight = '10px';
+                    newBlock.style.opacity = (i + 1) * 0.1;
+                    newBlock.textContent = i + 1;
+                    main.appendChild(newBlock);
+                }
+            }
         </script>
     </head>
     <body>
@@ -84,6 +101,7 @@
             <button onclick="addNewBlocks()">Добавить блоки</button>
             <button onclick="add20_50()">20 => 50</button>
             <button onclick="addCircles()">10 => -80</button>
+            <button onclick="addOpacityBlocks()">Полупрозрачные блоки</button>
 
         </main>
 
