@@ -88,6 +88,25 @@
                     main.appendChild(newBlock);
                 }
             }
+            function addColoredCircles() {
+            let main = document.querySelector('main');
+            let circlesCount = document.getElementById('circlesCount').value;
+            for (let i = circlesCount; i > 0; i--) {
+                let circle = document.createElement('div');
+                circle.classList.add('circle');
+                circle.textContent = i;
+                circle.style.width = '50px';
+                circle.style.height = '50px';
+                circle.style.borderRadius = '50%';
+                circle.style.display = 'inline-block';
+                if (i % 2 === 0) { 
+                    circle.style.backgroundColor = 'Magenta';
+                } else {
+                    circle.style.backgroundColor = 'SlateBlue';
+                }
+                main.appendChild(circle);
+            }
+        }
         </script>
     </head>
     <body>
@@ -102,6 +121,8 @@
             <button onclick="add20_50()">20 => 50</button>
             <button onclick="addCircles()">10 => -80</button>
             <button onclick="addOpacityBlocks()">Полупрозрачные блоки</button>
+            <input type="number" id="circlesCount" placeholder="Количество кругов">
+            <button onclick="addColoredCircles()">Пурпурный/Темно-синий</button>
 
         </main>
 
