@@ -7,4 +7,11 @@ function showDate() {
     out.innerHTML += '<br>Франция: ' + today.toLocaleString('fr-FR', { timeZone: 'Europe/Paris' });
     out.innerHTML += '<br>Япония: ' + today.toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo' });
     out.innerHTML += '<br>Китай: ' + today.toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' });
+
+    out.innerHTML += '<br><br><b>Вывод текущей даты</b>';
+
+    out.innerHTML += '<br>Текущий год: ' + today.getFullYear();
+    out.innerHTML += '<br>Текущий месяц: ' + (today.getMonth() + 1);
+    out.innerHTML += '<br>Текущая дата: ' + today.getDate();
+    out.innerHTML += '<br>День недели: ' + today.toLocaleString('ru-RU', { weekday: 'long' });
 }
