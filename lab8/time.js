@@ -18,3 +18,14 @@ function showSeconds() {
         showTime();
         showSeconds();
     }, 1000);
+
+function showArrow() {
+    let today = new Date();
+    let seconds = today.getSeconds();
+    let degrees = seconds * 6;
+    document.getElementById('arrow').style.transform = `rotate(${degrees}deg)`;
+}
+      setInterval(function() {
+        showTime();
+        showArrow();
+      }, 1000);

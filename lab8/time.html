@@ -21,10 +21,32 @@
             }
             #seconds {
               position: absolute;
-              top: 50%;
+              top: 40%;
               left: 50%;
               transform: translate(-50%, -50%);
               font-size: 72px;
+            }
+            .chas {
+              position: absolute;
+              top: 70%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 200px;
+              height: 200px;
+              border: 2px solid #00aeff;
+              border-radius: 50%;
+              background-color: #dff4fd;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            }
+            #arrow {
+              position: absolute;
+              top: 40% ;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 5px;
+              height: 80px;
+              background-color: #31ffff;
+              margin: 0 auto;
             }
         </style>
         <script src="time.js"></script>
@@ -36,8 +58,11 @@
         </header>
         <main>
             <div id="seconds">00</div>
+            <div class="chas">
+                <div id="arrow"></div>
+            </div>
+            
         </main>
-
         <footer>
             &copy; Екатерина Кузьменко, ФБИ-23, 2 курс, 2024
         </footer>
