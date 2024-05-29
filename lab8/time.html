@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Кузьменко Екатерина Алексеевна. Число дней с даты рождения</title>
+        <link rel="stylesheet" href="../main.css">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../favicon-32x32.png">
+        <link rel="icon" href="../favicon-16x16.png">
+        <style>
+            #time {
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              font-size: 24px;
+              color: #fff;
+              background-color: #49cbff;
+              padding: 5px 10px;
+              border-radius: 5px;
+            }
+            #seconds {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              font-size: 72px;
+            }
+        </style>
+        <script src="time.js"></script>
+    </head>
+    <body onload="showTime()">
+        <header>
+            НГТУ, ФБ, Лабораторная работа 8
+            <div id="time">00:00:00</div>
+        </header>
+        <main>
+            <div id="seconds">00</div>
+        </main>
+
+        <footer>
+            &copy; Екатерина Кузьменко, ФБИ-23, 2 курс, 2024
+        </footer>
+    </body>
+</html>
