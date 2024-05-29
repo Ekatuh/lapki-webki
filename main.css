@@ -18,6 +18,10 @@ footer {
     font-size: 16pt; 
     font-style: italic; 
     text-align: right;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 
 header {
